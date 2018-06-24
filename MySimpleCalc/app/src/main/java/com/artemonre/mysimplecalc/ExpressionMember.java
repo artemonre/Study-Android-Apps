@@ -18,7 +18,8 @@ public class ExpressionMember {
                     case ("^"):
                     case ("r"):
                     case ("%"):
-                        if (this.expMember.contains ("^") || this.expMember.contains ("r") || this.expMember.contains ("%"))
+                    case ("L"):
+                        if (this.expMember.contains ("^") || this.expMember.contains ("r") || this.expMember.contains ("%") || this.expMember.contains ("L"))
                             break;
                     default: this.expMember.add(args[1]); this.lenght++;
                 }
@@ -51,6 +52,10 @@ public class ExpressionMember {
 
     public byte getLenght () {
         return this.lenght;
+    }
+
+    public static void setAccuracy(byte accuracy) {
+        MyCalculator.setDf (accuracy);
     }
 
 }

@@ -3,8 +3,6 @@
     <string name="stdNum">0</string>
     <string name="switcher">Switch</string>
     <string name="btnCancel">C</string>
-    <string name="leftBracket">(</string>
-    <string name="rightBracket">)</string>
     <string name="buttonSeven">7</string>
     <string name="buttonEight">8</string>
     <string name="buttonNine">9</string>
@@ -27,4 +25,7 @@
     <string name="buttonDegree">^</string>
     <string name="btnMSave">M Save</string>
     <string name="btnMLoad">M Load</string>
+    <string name="btnBackSpace">Bck</string>
+    <string name="btnLogarifm">Log</string>
+    <string name="btnFrct">x/y</string>
 </resources>

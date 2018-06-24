@@ -75,8 +75,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:max="10"
-                    android:progress="3" />
+                    android:max="4"
+                    android:progress="2" />
 
             </LinearLayout>
 
@@ -210,13 +210,28 @@
                             android:layout_height="match_parent"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="Back"/>
+                            android:text="@string/btnBackSpace"/>
+                        <Button
+                            android:id="@+id/btnFrct"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/btnFrct"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_weight="1">
                         <Button
                             android:id="@+id/btnPrcnt"
                             android:layout_height="match_parent"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/buttonPercent"/>
+                        <Button
+                            android:id="@+id/btnLgrfm"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/btnLogarifm"/>
                     </TableRow>
                     <TableRow
                         android:layout_weight="1">

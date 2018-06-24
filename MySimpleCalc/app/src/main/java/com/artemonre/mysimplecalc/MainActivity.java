@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Switch switch1;
     SeekBar seekBar;
     Button btnC, btnMSave, btnMLoad, btnSvn, btnEght, btnNine, btnFour, btnFive, btnSix, btnOne, btnTwo, btnThree,
-            btnPlusMinus, btnZero, btnDot, btnPls, btnBckSpc, btnPrcnt, btnMns, btnRoot, btnMlt, btnDgr, btnDvsn, btnEqls;
+            btnPlusMinus, btnZero, btnDot, btnPls, btnBckSpc, btnFrct, btnLgrfm, btnPrcnt, btnMns, btnRoot, btnMlt, btnDgr, btnDvsn, btnEqls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
         btnDot = findViewById (R.id.btnDot);
         btnPls = findViewById (R.id.btnPls);
         btnBckSpc = findViewById (R.id.btnBckSpc);
+        btnFrct = findViewById (R.id.btnFrct);
+        btnLgrfm = findViewById (R.id.btnLgrfm);
         btnPrcnt = findViewById (R.id.btnPrcnt);
         btnMns = findViewById (R.id.btnMns);
+        btnRoot = findViewById (R.id.btnRoot);
         btnRoot = findViewById (R.id.btnRoot);
         btnMlt = findViewById (R.id.btnMlt);
         btnDgr = findViewById (R.id.btnDgr);
@@ -74,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         btnZero.setOnClickListener (onClickListener);
         btnDot.setOnClickListener (onClickListener);
         btnPls.setOnClickListener (onClickListener);
+        btnFrct.setOnClickListener (onClickListener);
+        btnLgrfm.setOnClickListener (onClickListener);
         btnBckSpc.setOnClickListener (onClickListener);
         btnPrcnt.setOnClickListener (onClickListener);
         btnMns.setOnClickListener (onClickListener);
@@ -83,10 +88,24 @@ public class MainActivity extends AppCompatActivity {
         btnDvsn.setOnClickListener (onClickListener);
         btnEqls.setOnClickListener (onClickListener);
 
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                ExpressionMember.setAccuracy ((byte) progress);
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
     }
 
-    public void setScreen (String screenText) {
+    public static void setScreenText (String screenText) {
         screen.setText (screenText);
+    }
+    public static void setResultScreenText (String resultScreenText) {
+        resultScreen.setText (resultScreenText);
     }
 
 }
